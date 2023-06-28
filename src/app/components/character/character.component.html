@@ -1,0 +1,8 @@
+<ng-container *ngIf="character; else CharacterNotFound">
+  <h2>{{ character.name }}</h2>
+  <p> {{ character.species }}</p>
+  <img [ngSrc]="character.image" alt="" width="240" height="240">
+</ng-container>
+<ng-template #CharacterNotFound>
+  <h2>Character not found</h2>
+</ng-template>
